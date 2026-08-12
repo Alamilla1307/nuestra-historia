@@ -3,586 +3,231 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Nuestra historia ❤️</title>
+<title>Para ti ❤️</title>
 
 <style>
-
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg,#ffd6e7,#fff0f5,#ffc1d9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-x: hidden;
-    color: #5a1635;
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ffd6e7, #fff5f8);
+  color: #6b1837;
+  text-align: center;
 }
 
 .contenedor {
-    width: 92%;
-    max-width: 500px;
-    background: rgba(255,255,255,.95);
-    border-radius: 30px;
-    padding: 30px 22px;
-    text-align: center;
-    box-shadow: 0 15px 40px rgba(120,30,70,.25);
-    position: relative;
-    z-index: 2;
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  padding: 35px 15px;
+}
+
+.tarjeta {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.15);
 }
 
 h1 {
-    color: #d4145a;
-    font-size: 30px;
+  font-size: 30px;
 }
 
-h2 {
-    color: #c2185b;
-}
-
-.mensaje {
-    font-size: 18px;
-    line-height: 1.7;
-}
-
-.pregunta {
-    font-size: 25px;
-    font-weight: bold;
-    margin: 25px 0;
-}
-
-input {
-    width: 90%;
-    padding: 14px;
-    border: 2px solid #f3a5c0;
-    border-radius: 20px;
-    font-size: 17px;
-    text-align: center;
-    outline: none;
-}
-
-button {
-    border: none;
-    padding: 14px 28px;
-    border-radius: 30px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0,0,0,.15);
-}
-
-.boton-entrar {
-    background: #e91e63;
-    color: white;
-    margin-top: 15px;
-}
-
-#si {
-    background: #e91e63;
-    color: white;
-    margin-right: 10px;
-}
-
-#no {
-    background: #eee;
-    color: #555;
-    position: absolute;
-}
-
-.botones {
-    height: 120px;
-    position: relative;
-}
-
-.contador {
-    font-size: 21px;
-    font-weight: bold;
-    color: #d4145a;
-    margin: 20px 0;
-    line-height: 1.7;
-}
-
-.oculto {
-    display: none;
-}
-
-.error {
-    color: #d4145a;
-    font-weight: bold;
-    margin-top: 12px;
-}
-
-.galeria {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.galeria img {
-    width: 100%;
-    height: 170px;
-    object-fit: cover;
-    border-radius: 15px;
+p {
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 .corazon {
-    position: fixed;
-    font-size: 25px;
-    animation: flotar 7s linear infinite;
-    opacity: .7;
-    pointer-events: none;
+  font-size: 55px;
+  animation: latido 1.2s infinite;
 }
 
-@keyframes flotar {
-
-    from {
-        transform: translateY(110vh) rotate(0deg);
-    }
-
-    to {
-        transform: translateY(-10vh) rotate(360deg);
-    }
-
+@keyframes latido {
+  50% {
+    transform: scale(1.15);
+  }
 }
 
+button {
+  border: none;
+  padding: 14px 25px;
+  border-radius: 30px;
+  font-size: 18px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.si {
+  background: #ff4f87;
+  color: white;
+}
+
+.no {
+  background: #ddd;
+  color: #555;
+  position: relative;
+}
+
+#despues {
+  display: none;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.galeria img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.contador {
+  margin-top: 25px;
+  padding: 15px;
+  background: #fff0f5;
+  border-radius: 15px;
+  font-size: 18px;
+}
+
+.mensaje-final {
+  margin-top: 25px;
+  font-size: 20px;
+}
 </style>
 </head>
 
 <body>
 
-<div class="corazon" style="left:10%;animation-delay:0s;">❤️</div>
-<div class="corazon" style="left:30%;animation-delay:2s;">💕</div>
-<div class="corazon" style="left:55%;animation-delay:1s;">💗</div>
-<div class="corazon" style="left:80%;animation-delay:3s;">❤️</div>
-
 <div class="contenedor">
 
-<!-- CONTRASEÑA -->
+<div class="tarjeta">
 
-<div id="login">
+<div class="corazon">❤️</div>
 
-    <div style="font-size:60px;">🔐❤️</div>
+<h1>Una pregunta para ti...</h1>
 
-    <h1>
-        SOLO TÚ PUEDES ENTRAR AQUÍ ❤️
-    </h1>
+<p>
+Después de todos los momentos que hemos compartido,
+hay algo que quiero preguntarte de una manera muy especial. 🥰
+</p>
 
-    <p class="mensaje">
-        Esta página es solamente para ti,
-        mi consentida. 🥰
-    </p>
+<h2>¿Quieres ser mi novia? 🙈❤️</h2>
 
-    <p>
-        Introduce la contraseña para continuar:
-    </p>
+<button class="si" onclick="aceptar()">SÍ ❤️</button>
 
-    <input
-        type="password"
-        id="password"
-        placeholder="Contraseña ❤️"
-    >
+<button class="no" onmouseover="mover(this)">
+NO 😏
+</button>
 
-    <br>
+<div id="despues">
 
-    <button class="boton-entrar" onclick="entrar()">
-        Entrar ❤️
-    </button>
+<h1>🥰 ¡SABÍA QUE DIRÍAS QUE SÍ! ❤️</h1>
 
-    <p style="font-size:15px;">
-        💡 Pista: dos palabras, una historia
-        y sé lo que te cuesta decirla. ❤️
-    </p>
+<p>
+Desde este momento comienza oficialmente
+nuestra historia como novios. 💕
+</p>
 
-    <div id="error" class="error"></div>
-
+<div class="contador">
+⏱️ Nuestro tiempo juntos:<br><br>
+<span id="tiempo">0 días</span>
 </div>
 
-
-<!-- PREGUNTA -->
-
-<div id="inicio" class="oculto">
-
-    <div style="font-size:55px;">🌹❤️</div>
-
-    <h1>
-        Tengo algo que decirte primero ❤️🙈...
-    </h1>
-
-    <p class="mensaje">
-
-        No sé en qué momento empezaste a ocupar
-        un lugar tan especial en mis pensamientos,
-        pero aquí estoy, intentando decirte
-        lo que siento. ❤️
-
-        <br><br>
-
-        Me encanta estar contigo, hablar contigo,
-        hacerte sonreír y cada momento que
-        compartimos se ha vuelto muy especial
-        para mí. 🥰
-
-        <br><br>
-
-        Tal vez no sé exactamente cómo decir
-        todo lo que siento, pero sí sé que quiero
-        intentarlo contigo.
-
-        <br><br>
-
-        Quiero seguir conociéndote, compartir
-        momentos, apoyarte.
-        No pienso dejarte sola, te lo prometo. ❤️
-
-        <br><br>
-
-        Quiero hacerte feliz y estar para ti,
-        tanto en los días buenos como en los
-        no tan buenos.
-
-        <br><br>
-
-        Créeme, quiero darte mi mejor versión
-        y que te sientas protegida conmigo. ❤️
-
-        <br><br>
-
-        <strong>TE AMO. 🥹❤️</strong>
-
-    </p>
-
-    <p class="mensaje">
-        Y hay algo que quiero preguntarte
-        de una manera un poquito diferente... 🙈
-    </p>
-
-    <div class="pregunta">
-        ¿Quieres ser mi novia? ❤️
-    </div>
-
-    <div class="botones">
-
-        <button id="si" onclick="aceptar()">
-            SÍ ❤️
-        </button>
-
-        <button
-            id="no"
-            onmouseover="escapar()"
-            ontouchstart="escapar()"
-        >
-            NO 🙈
-        </button>
-
-    </div>
-
+<div class="mensaje-final">
+Te quiero muchísimo ❤️😘
 </div>
 
+<div class="galeria">
 
-<!-- FINAL -->
-
-<div id="final" class="oculto">
-
-    <div style="font-size:65px;">
-        🥹❤️
-    </div>
-
-    <h1>
-        ¡SABÍA QUE DIRÍAS QUE SÍ! ❤️
-    </h1>
-
-    <p class="mensaje">
-        Entonces oficialmente comienza
-        nuestra historia. 🥰
-    </p>
-
-    <div style="font-size:35px;">
-        ❤️💕❤️💕❤️
-    </div>
-
-    <h2>
-        Nuestra historia comenzó hace...
-    </h2>
-
-    <div class="contador" id="contador">
-        0 días<br>
-        00 horas : 00 minutos : 00 segundos
-    </div>
-
-    <p class="mensaje">
-        Y espero que este contador llegue a contar
-        muchísimos momentos más contigo. ❤️
-    </p>
-
-    <h2>
-        Nuestros momentos 📸
-    </h2>
-
-    <div class="galeria">
-
-        <img src="fotos/foto1.jpeg" style="object-position: center 40%;">
-        <img src="fotos/foto2.jpeg">
-        <img src="fotos/foto3.jpeg">
-        <img src="fotos/foto4.jpeg" style="object-position: center 40%;">
-        <img src="fotos/foto5.jpeg" style="object-position: center 30%;">
-        <img src="fotos/foto6.jpeg" style="object-position: center 80%;">
-        <img src="fotos/foto7.jpeg" style="object-position: center 40%;">
-        <img src="fotos/foto8.jpeg">
-    </div>
-
-    <p style="font-size:18px;margin-top:25px;">
-        ❤️ Te quiero muchísimo ❤️
-    </p>
+<img src="foto1.jpeg">
+<img src="foto2.jpeg">
+<img src="foto3.jpeg">
+<img src="foto4.jpeg">
+<img src="foto5.jpeg">
+<img src="foto6.jpeg">
+<img src="foto7.jpeg">
+<img src="foto8.jpeg">
 
 </div>
 
 </div>
 
+</div>
+</div>
 
 <script>
 
-// ==============================
-// CONTRASEÑA
-// ==============================
-
-const CONTRASENA = "Te amo";
-
-
-// ==============================
-// ENTRAR
-// ==============================
-
-function entrar() {
-
-    const password =
-        document.getElementById("password").value;
-
-    const error =
-        document.getElementById("error");
-
-    if (password === CONTRASENA) {
-
-        error.innerHTML = "";
-
-        document.getElementById("login")
-            .classList.add("oculto");
-
-        if (localStorage.getItem("fechaAceptacion")) {
-
-            document.getElementById("final")
-                .classList.remove("oculto");
-
-            actualizarContador();
-
-        } else {
-
-            document.getElementById("inicio")
-                .classList.remove("oculto");
-
-        }
-
-    } else {
-
-        error.innerHTML =
-            "Contraseña incorrecta 🙈❤️";
-
-    }
-
-}
-
-
-// ==============================
-// ACEPTAR
-// ==============================
-
 function aceptar() {
 
-    if (!localStorage.getItem("fechaAceptacion")) {
+document.getElementById("despues").style.display = "block";
 
-        const fecha =
-            new Date().getTime();
+localStorage.setItem("fechaNoviazgo", new Date().getTime());
 
-        localStorage.setItem(
-            "fechaAceptacion",
-            fecha
-        );
+actualizarContador();
 
-    }
-
-    document.getElementById("inicio")
-        .classList.add("oculto");
-
-    document.getElementById("final")
-        .classList.remove("oculto");
-
-    crearCorazones();
-
-    actualizarContador();
+window.scrollTo({
+top: document.body.scrollHeight,
+behavior: "smooth"
+});
 
 }
 
+function mover(boton) {
 
-// ==============================
-// CONTADOR
-// ==============================
+boton.style.position = "fixed";
+
+boton.style.left =
+Math.random() * 70 + 15 + "%";
+
+boton.style.top =
+Math.random() * 70 + 15 + "%";
+
+}
 
 function actualizarContador() {
 
-    const fecha =
-        localStorage.getItem("fechaAceptacion");
+let fecha = localStorage.getItem("fechaNoviazgo");
 
-    if (!fecha) return;
+if (!fecha) return;
 
-    const ahora =
-        new Date().getTime();
+let inicio = new Date(parseInt(fecha));
 
-    const diferencia =
-        ahora - parseInt(fecha);
+let ahora = new Date();
 
-    let segundos =
-        Math.floor(diferencia / 1000);
+let diferencia =
+ahora.getTime() - inicio.getTime();
 
-    let dias =
-        Math.floor(segundos / 86400);
+let dias =
+Math.floor(diferencia / (1000 * 60 * 60 * 24));
 
-    segundos %= 86400;
+let horas =
+Math.floor((diferencia / (1000 * 60 * 60)) % 24);
 
-    let horas =
-        Math.floor(segundos / 3600);
+let minutos =
+Math.floor((diferencia / (1000 * 60)) % 60);
 
-    segundos %= 3600;
+let segundos =
+Math.floor((diferencia / 1000) % 60);
 
-    let minutos =
-        Math.floor(segundos / 60);
-
-    segundos %= 60;
-
-    document.getElementById("contador").innerHTML =
-        dias + " días<br>" +
-        String(horas).padStart(2,"0") +
-        " horas : " +
-        String(minutos).padStart(2,"0") +
-        " minutos : " +
-        String(segundos).padStart(2,"0") +
-        " segundos";
+document.getElementById("tiempo").innerHTML =
+dias + " días " +
+horas + " horas " +
+minutos + " minutos " +
+segundos + " segundos ❤️";
 
 }
 
-setInterval(
-    actualizarContador,
-    1000
-);
-
-
-// ==============================
-// BOTÓN NO
-// ==============================
-
-function escapar() {
-
-    const boton =
-        document.getElementById("no");
-
-    const contenedor =
-        document.querySelector(".botones");
-
-    const ancho =
-        contenedor.clientWidth -
-        boton.offsetWidth;
-
-    const alto =
-        contenedor.clientHeight -
-        boton.offsetHeight;
-
-    const x =
-        Math.random() * Math.max(ancho,0);
-
-    const y =
-        Math.random() * Math.max(alto,0);
-
-    boton.style.left =
-        x + "px";
-
-    boton.style.top =
-        y + "px";
-
-}
-
-
-// ==============================
-// CORAZONES
-// ==============================
-
-function crearCorazones() {
-
-    for (let i = 0; i < 35; i++) {
-
-        const corazon =
-            document.createElement("div");
-
-        corazon.innerHTML =
-            ["❤️","💕","💗","💖","💘"]
-            [Math.floor(Math.random() * 5)];
-
-        corazon.style.position =
-            "fixed";
-
-        corazon.style.left =
-            Math.random() * 100 + "vw";
-
-        corazon.style.top =
-            Math.random() * 100 + "vh";
-
-        corazon.style.fontSize =
-            (20 + Math.random() * 25) + "px";
-
-        corazon.style.zIndex =
-            "9999";
-
-        corazon.style.pointerEvents =
-            "none";
-
-        document.body.appendChild(
-            corazon
-        );
-
-        corazon.animate(
-            [
-                {
-                    transform:
-                        "translateY(0) scale(1)",
-                    opacity: 1
-                },
-                {
-                    transform:
-                        "translateY(-100vh) scale(1.5)",
-                    opacity: 0
-                }
-            ],
-            {
-                duration:
-                    2500 + Math.random() * 2000,
-
-                easing:
-                    "ease-out"
-            }
-        );
-
-        setTimeout(() => {
-
-            corazon.remove();
-
-        }, 5000);
-
-    }
-
-}
+setInterval(actualizarContador, 1000);
 
 </script>
 
