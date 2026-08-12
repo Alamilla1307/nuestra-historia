@@ -3,106 +3,114 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Para ti ❤️</title>
 
 <style>
+
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  min-height: 100vh;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #ffd6e7, #fff5f8);
-  color: #6b1837;
-  text-align: center;
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffd6e7, #fff4f8);
+    color: #6b1837;
+    text-align: center;
 }
 
 .contenedor {
-  width: 90%;
-  max-width: 500px;
-  margin: auto;
-  padding: 35px 15px;
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    padding: 35px 15px;
 }
 
 .tarjeta {
-  background: white;
-  padding: 30px 20px;
-  border-radius: 25px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.15);
-}
-
-h1 {
-  font-size: 30px;
-}
-
-p {
-  font-size: 18px;
-  line-height: 1.6;
+    background: white;
+    padding: 30px 20px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
 .corazon {
-  font-size: 55px;
-  animation: latido 1.2s infinite;
+    font-size: 60px;
+    animation: latido 1.2s infinite;
 }
 
 @keyframes latido {
-  50% {
-    transform: scale(1.15);
-  }
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 23px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 button {
-  border: none;
-  padding: 14px 25px;
-  border-radius: 30px;
-  font-size: 18px;
-  margin: 10px;
-  cursor: pointer;
+    border: none;
+    padding: 14px 26px;
+    border-radius: 30px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
 }
 
 .si {
-  background: #ff4f87;
-  color: white;
+    background: #ff4f87;
+    color: white;
 }
 
 .no {
-  background: #ddd;
-  color: #555;
-  position: relative;
+    background: #ddd;
+    color: #555;
+    position: relative;
 }
 
 #despues {
-  display: none;
-}
-
-.galeria {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-top: 25px;
-}
-
-.galeria img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 15px;
+    display: none;
+    margin-top: 25px;
 }
 
 .contador {
-  margin-top: 25px;
-  padding: 15px;
-  background: #fff0f5;
-  border-radius: 15px;
-  font-size: 18px;
+    margin-top: 25px;
+    padding: 18px;
+    background: #fff0f5;
+    border-radius: 18px;
+    font-size: 18px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.galeria img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
 }
 
 .mensaje-final {
-  margin-top: 25px;
-  font-size: 20px;
+    margin-top: 25px;
+    font-size: 21px;
 }
+
 </style>
 </head>
 
@@ -118,12 +126,16 @@ button {
 
 <p>
 Después de todos los momentos que hemos compartido,
-hay algo que quiero preguntarte de una manera muy especial. 🥰
+quiero preguntarte algo muy especial. 🥰
 </p>
 
-<h2>¿Quieres ser mi novia? 🙈❤️</h2>
+<h2>
+¿Quieres ser mi novia? 🙈❤️
+</h2>
 
-<button class="si" onclick="aceptar()">SÍ ❤️</button>
+<button class="si" onclick="aceptar()">
+SÍ ❤️
+</button>
 
 <button class="no" onmouseover="mover(this)">
 NO 😏
@@ -131,7 +143,9 @@ NO 😏
 
 <div id="despues">
 
-<h1>🥰 ¡SABÍA QUE DIRÍAS QUE SÍ! ❤️</h1>
+<h1>
+🥰 ¡SABÍA QUE DIRÍAS QUE SÍ! ❤️
+</h1>
 
 <p>
 Desde este momento comienza oficialmente
@@ -139,12 +153,21 @@ nuestra historia como novios. 💕
 </p>
 
 <div class="contador">
-⏱️ Nuestro tiempo juntos:<br><br>
-<span id="tiempo">0 días</span>
+
+⏱️ Nuestro tiempo juntos:
+
+<br><br>
+
+<span id="tiempo">
+0 días 0 horas 0 minutos 0 segundos ❤️
+</span>
+
 </div>
 
 <div class="mensaje-final">
+
 Te quiero muchísimo ❤️😘
+
 </div>
 
 <div class="galeria">
@@ -163,71 +186,95 @@ Te quiero muchísimo ❤️😘
 </div>
 
 </div>
+
 </div>
 
 <script>
 
 function aceptar() {
 
-document.getElementById("despues").style.display = "block";
+    document.getElementById("despues").style.display = "block";
 
-localStorage.setItem("fechaNoviazgo", new Date().getTime());
+    if (!localStorage.getItem("fechaNoviazgo")) {
+        localStorage.setItem(
+            "fechaNoviazgo",
+            new Date().getTime()
+        );
+    }
 
-actualizarContador();
+    actualizarContador();
 
-window.scrollTo({
-top: document.body.scrollHeight,
-behavior: "smooth"
-});
-
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+    });
 }
+
 
 function mover(boton) {
 
-boton.style.position = "fixed";
+    boton.style.position = "fixed";
 
-boton.style.left =
-Math.random() * 70 + 15 + "%";
+    boton.style.left =
+        Math.random() * 70 + 15 + "%";
 
-boton.style.top =
-Math.random() * 70 + 15 + "%";
-
+    boton.style.top =
+        Math.random() * 70 + 15 + "%";
 }
+
 
 function actualizarContador() {
 
-let fecha = localStorage.getItem("fechaNoviazgo");
+    let fecha =
+        localStorage.getItem("fechaNoviazgo");
 
-if (!fecha) return;
+    if (!fecha) return;
 
-let inicio = new Date(parseInt(fecha));
+    let inicio =
+        new Date(parseInt(fecha));
 
-let ahora = new Date();
+    let ahora =
+        new Date();
 
-let diferencia =
-ahora.getTime() - inicio.getTime();
+    let diferencia =
+        ahora.getTime() -
+        inicio.getTime();
 
-let dias =
-Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    let dias =
+        Math.floor(
+            diferencia /
+            (1000 * 60 * 60 * 24)
+        );
 
-let horas =
-Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+    let horas =
+        Math.floor(
+            (diferencia /
+            (1000 * 60 * 60)) % 24
+        );
 
-let minutos =
-Math.floor((diferencia / (1000 * 60)) % 60);
+    let minutos =
+        Math.floor(
+            (diferencia /
+            (1000 * 60)) % 60
+        );
 
-let segundos =
-Math.floor((diferencia / 1000) % 60);
+    let segundos =
+        Math.floor(
+            (diferencia / 1000) % 60
+        );
 
-document.getElementById("tiempo").innerHTML =
-dias + " días " +
-horas + " horas " +
-minutos + " minutos " +
-segundos + " segundos ❤️";
-
+    document.getElementById("tiempo").innerHTML =
+        dias + " días " +
+        horas + " horas " +
+        minutos + " minutos " +
+        segundos + " segundos ❤️";
 }
 
-setInterval(actualizarContador, 1000);
+
+setInterval(
+    actualizarContador,
+    1000
+);
 
 </script>
 
