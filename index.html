@@ -59,6 +59,13 @@ p {
     line-height: 1.6;
 }
 
+.texto-amor {
+    text-align: left;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-top: 25px;
+}
+
 button {
     border: none;
     padding: 14px 26px;
@@ -124,14 +131,45 @@ button {
 
 <h1>Una pregunta para ti...</h1>
 
-<p>
-Después de todos los momentos que hemos compartido,
-quiero preguntarte algo muy especial. 🥰
-</p>
+<div class="texto-amor">
 
-<h2>
-¿Quieres ser mi novia? 🙈❤️
-</h2>
+No sé en qué momento empezaste a ocupar un lugar tan especial
+en mis pensamientos, pero aquí estoy, intentando decirte
+lo que siento. ❤️
+
+<br><br>
+
+Me encanta estar contigo, hablar contigo, hacerte sonreír
+y cada momento que compartimos se ha vuelto muy especial
+para mí. 🥰
+
+<br><br>
+
+Tal vez no sé exactamente cómo decir todo lo que siento,
+pero sí sé que quiero intentarlo contigo.
+
+<br><br>
+
+Quiero seguir conociéndote, compartir momentos, apoyarte.
+No pienso dejarte sola, te lo prometo. ❤️
+
+<br><br>
+
+Quiero hacerte feliz y estar para ti tanto en los días buenos
+como en los no tan buenos.
+
+<br><br>
+
+Créeme, quiero darte mi mejor versión y que te sientas
+protegida conmigo. ❤️
+
+<br><br>
+
+<strong>TE AMO. 🥹❤️</strong>
+
+</div>
+
+<h2>¿Quieres ser mi novia? 🙈❤️</h2>
 
 <button class="si" onclick="aceptar()">
 SÍ ❤️
@@ -140,6 +178,7 @@ SÍ ❤️
 <button class="no" onmouseover="mover(this)">
 NO 😏
 </button>
+
 
 <div id="despues">
 
@@ -151,6 +190,7 @@ NO 😏
 Desde este momento comienza oficialmente
 nuestra historia como novios. 💕
 </p>
+
 
 <div class="contador">
 
@@ -164,11 +204,13 @@ nuestra historia como novios. 💕
 
 </div>
 
+
 <div class="mensaje-final">
 
 Te quiero muchísimo ❤️😘
 
 </div>
+
 
 <div class="galeria">
 
@@ -189,6 +231,7 @@ Te quiero muchísimo ❤️😘
 
 </div>
 
+
 <script>
 
 function aceptar() {
@@ -196,10 +239,12 @@ function aceptar() {
     document.getElementById("despues").style.display = "block";
 
     if (!localStorage.getItem("fechaNoviazgo")) {
+
         localStorage.setItem(
             "fechaNoviazgo",
             new Date().getTime()
         );
+
     }
 
     actualizarContador();
@@ -208,6 +253,7 @@ function aceptar() {
         top: document.body.scrollHeight,
         behavior: "smooth"
     });
+
 }
 
 
@@ -220,6 +266,7 @@ function mover(boton) {
 
     boton.style.top =
         Math.random() * 70 + 15 + "%";
+
 }
 
 
@@ -230,15 +277,18 @@ function actualizarContador() {
 
     if (!fecha) return;
 
+
     let inicio =
         new Date(parseInt(fecha));
 
     let ahora =
         new Date();
 
+
     let diferencia =
         ahora.getTime() -
         inicio.getTime();
+
 
     let dias =
         Math.floor(
@@ -246,11 +296,13 @@ function actualizarContador() {
             (1000 * 60 * 60 * 24)
         );
 
+
     let horas =
         Math.floor(
             (diferencia /
             (1000 * 60 * 60)) % 24
         );
+
 
     let minutos =
         Math.floor(
@@ -258,16 +310,19 @@ function actualizarContador() {
             (1000 * 60)) % 60
         );
 
+
     let segundos =
         Math.floor(
             (diferencia / 1000) % 60
         );
+
 
     document.getElementById("tiempo").innerHTML =
         dias + " días " +
         horas + " horas " +
         minutos + " minutos " +
         segundos + " segundos ❤️";
+
 }
 
 
